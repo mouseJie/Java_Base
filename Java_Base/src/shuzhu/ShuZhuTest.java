@@ -21,45 +21,42 @@ public class ShuZhuTest {
 		/**
 		 * 选择法排序
 		 */
-//		int[] a = new int[] {78,2,55,15,456,11};
-//		//从小到大排序
-//		for(int i = 0; i < a.length; i++) {
-//			for(int j = i+1; j < a.length; j++) {
-//				if(a[j]<a[i]) {
-////					temp = a[i];
-////					a[i] = a[j];
-////					a[j] = temp;
-//					int temp = a[i];
-//					a[i] = a[j];
-//					a[j] = temp;
-//				}
-//			}
-//		}
-//		System.out.println("选择法排序后结果为：");
-//		for(int i = 0; i < a.length; i++) {
-//			System.out.println(a[i]);
-//		}
+		int[] a = new int[] {67,7,30,73,10,0,78,81,10,74};
+		//从小到大排序
+		for(int i = 0; i < a.length; i++) {
+			for(int j = i+1; j < a.length; j++) {
+				if(a[j]<a[i]) {
+					int temp = a[i];
+					a[i] = a[j];
+					a[j] = temp;
+				}
+			}
+		}
+		System.out.println("选择法排序后结果为：");
+		for(int i = 0; i < a.length; i++) {
+			System.out.println(a[i]);
+		}
 		
 		/**
 		 * 冒泡法排序
 		 */
-		int[] a = new int[] {78,2,55,15,456,11,10};
-		//外循环就负责将最后一位的位置不断向前移动，不断向前移动接受内循环的最后一位赋值max
-		for(int j = a.length-1; j >0; j--) {
-			//内循环会将max值移向最后一位
-			for(int i=0; i<j; i++) {
-				if(a[i]>a[i+1]) {
-					int temp = a[i];
-					a[i] = a[i+1];
-					a[i+1] = temp;
-				}
-			}
-		}
-		
-		System.out.println("冒泡法排序后结果为：");
-		for(int i = 0; i < a.length; i++) {
-			System.out.println(a[i]);
-		}
+//		int[] a = new int[] {78,2,55,15,456,11,10};
+//		//外循环就负责将最后一位的位置不断向前移动，不断向前移动接受内循环的最后一位赋值max
+//		for(int j = a.length-1; j >0; j--) {
+//			//内循环会将max值移向最后一位
+//			for(int i=0; i<j; i++) {
+//				if(a[i]>a[i+1]) {
+//					int temp = a[i];
+//					a[i] = a[i+1];
+//					a[i+1] = temp;
+//				}
+//			}
+//		}
+//		
+//		System.out.println("冒泡法排序后结果为：");
+//		for(int i = 0; i < a.length; i++) {
+//			System.out.println(a[i]);
+//		}
 		
 		
 		/**
