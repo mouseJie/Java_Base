@@ -26,6 +26,13 @@ public class Hero implements Serializable, Comparable<Hero> {
 		this.sign = sign;
 		this.damage = damage;
 	}
+	
+	public Hero(String name, int sign, int damage, float hp) {
+		this.name = name;
+		this.sign = sign;
+		this.damage = damage;
+		this.hp = hp;
+	}
 
 	@Override
 	public String toString() {
@@ -71,4 +78,25 @@ public class Hero implements Serializable, Comparable<Hero> {
 		else
 			return -1;
 	}
+	
+	public void attackHero(Hero h) {
+        try {
+            //为了表示攻击需要时间，每次攻击暂停1000毫秒
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+         
+        if(h.isDead()) {
+        	System.out.println(name +"打死了！"+h.name);
+        }else {
+        	h.hp-=damage;
+            System.out.format("%s 正在攻击 %s, %s的血变成了 %.0f%n",name,h.name,h.name,h.hp);
+        }
+    }
+ 
+    public boolean isDead() {
+        return 0>=hp?true:false;
+    }
 }

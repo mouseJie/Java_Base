@@ -11,28 +11,28 @@ import java.util.Scanner;
 
 public class FileStreamTest {
 	public static void main(String[] args) {
-		File file = new File("F:\\java2test\\lol.txt");
+		File file = new File("F:\\java2test\\old\\name\\lurj\\newqq.txt");
 
 		/**
 		 * 文件输入流
 		 */
-		// try {
-		// FileInputStream fis = new FileInputStream(file);
-		// byte[] bytes = new byte[(int)file.length()];
-		// fis.read(bytes);
-		// for(byte b : bytes) {
-		// System.out.println(b);
-		// }
-		// fis.close();
-		// }catch(Throwable t) {
-		// if(t instanceof FileNotFoundException) {
-		// t.printStackTrace();
-		// System.out.println("未找到文件");
-		// }
-		// }
-		/**
-		 * 文件输出流
-		 */
+		 try {
+		 FileInputStream fis = new FileInputStream(file);
+		 byte[] bytes = new byte[(int)file.length()];
+		 fis.read(bytes);
+		 for(byte b : bytes) {
+		 System.out.println(b);
+		 }
+		 fis.close();
+		 }catch(Throwable t) {
+		 if(t instanceof FileNotFoundException) {
+		 t.printStackTrace();
+		 System.out.println("未找到文件");
+		 }
+		 }
+//		/**
+//		 * 文件输出流
+//		 */
 //		try {
 //			File writeFile = new File("F:\\java2test\\old\\name\\lurj\\newqq.txt");
 //			// 判断父文件夹目录是否存在
@@ -47,13 +47,15 @@ public class FileStreamTest {
 //		} catch (Exception e) {
 //			e.printStackTrace();
 //		}
-		String filePath = "F:\\java2test\\lol.txt";
-		String copyPath = "F:\\java2test\\copy\\test\\copylol2.txt";
-		try {
-			copyFile(filePath, copyPath);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
+		
+		
+//		String filePath = "F:\\java2test\\lol.txt";
+//		String copyPath = "F:\\java2test\\copy\\test\\copylol2.txt";
+//		try {
+//			copyFile(filePath, copyPath);
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}
 		
 		
 		/**

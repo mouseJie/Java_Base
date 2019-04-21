@@ -3,19 +3,6 @@ package fengzhuang;
 public class StringTest {
 	public static void main(String[] args) {
 		/**
-		 * 格式化字符串
-		 */
-		// System.out.println(String.valueOf(2).equals("2"));
-		// System.out.println(Integer.parseInt("2")==2);
-		//
-		// String name = "小明";
-		// int mikeSum = 2;
-		// String mikeName = "旺仔牛奶";
-		// System.out.printf("%s的妈妈给他带来了%d瓶%s", name, mikeSum, mikeName);
-		// System.out.println();
-		// System.out.format("%s的妈妈给他带来了%d瓶%s", name, mikeSum, mikeName);
-	
-		/**
 		 * 1. 生成一个长度是3的随机字符串，把这个字符串作为当做密码
 		 * 2. 使用穷举法生成长度是3个字符串，匹配上述生成的密码
 		 * 要求： 分别使用多层for循环 和 递归解决上述问题
@@ -72,8 +59,10 @@ public class StringTest {
 		for (short i = 'A'; i <= 'Z'; i++) {
 			pool += (char) i;
 		}
+		//pool已加完数字和大小写字母后
 		char cs[] = new char[length];
 		for (int i = 0; i < cs.length; i++) {
+			//然后通过Math.random()在以pool长度范围内抽取随机整数，即随机抽取pool的某个字符具体位置
 			int index = (int) (Math.random() * pool.length());
 			// String-->char String里面根据位置拿个对应的char
 			cs[i] = pool.charAt(index);

@@ -16,7 +16,7 @@ import java.io.PrintWriter;
  */
 public class FileCacheStream {
 	public static void main(String[] args) {
-		File f = new File("F://java2test//lol.txt");
+		File f = new File("F:\\java2test\\old\\name\\lurj\\newqq.txt");
 		File fcache = new File("F://java2test//lolCache.txt");
 		try (
 //				FileReader fr = new FileReader(f); 
