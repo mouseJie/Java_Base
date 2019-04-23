@@ -34,4 +34,12 @@ public class Hero implements Serializable {
 	public void setSign(int sign) {
 		this.sign = sign;
 	}
+	
+//	public void test() {
+//		System.out.println("调用成功");
+//	}
+	
+	public void test(String name) {
+		System.out.println("调用"+name+"成功");
+	}
 }

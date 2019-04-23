@@ -1,0 +1,2 @@
+class=wenjian.Hero
+method=test
